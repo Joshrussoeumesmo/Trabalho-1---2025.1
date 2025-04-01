@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Josh Russo">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Netflix Clone</h1>
+    </header>
+    
+    <main>
+        <section class="categoria">
+            <h2>Ação</h2>
+            <div class="filmes" id="acao">
+                <div class="filme" data-filme-id="1">
+                    <img src="img/Capas/Acao/FILME 1 - Pulp_Fiction_cover.jpg" alt="Pulp_Fiction_cover">
+                </div>
+                <div class="filme" data-filme-id="2">
+                    <img src="img/Capas/Acao/FILME 2 - Mad_max_estrada_da_furia.png" alt="Filme Ação 2">
+                </div>
+                <div class="filme" data-filme-id="3">
+                    <img src="img/Capas/Acao/FILME 3 - John_wick-de_volta_ao_jogo.png" alt="Filme Ação 3">
+                </div>
+                <div class="filme" data-filme-id="4">
+                    <img src="img/Capas/Acao/FILME 4  - O_exterminador_do_futuro_2-o_julgamento_final.png" alt="Filme Ação 4">
+                </div>
+                <div class="filme" data-filme-id="5">
+                    <img src="img/Capas/Acao/FILME 5 - Duro_de_matar.png" alt="Filme Ação 5">
+                </div>
+                <div class ="filme" data-filme-id="6">
+                    <img src="img/Capas/Acao/" alt="Filme Ação 6">
+                </div>
+                <div class="filme" data-filme-id="7">
+                    <img src="img/Capas/Acao/FILME 7 - Missao_impossivel-efeito_fallout.png" alt="Filme Ação 7">
+                </div>
+                <div class="filme" data-filme-id="8">
+                    <img src="img/Capas/Acao/" alt="Filme Ação 8">
+                </div>
+                <div class="filme" data-filme-id="9">
+                    <img src="img/Capas/Acao/FILME 9  - Os_infiltrados.png" alt="Filme Ação 9">
+                </div>
+                <div class="filme" data-filme-id="10">
+                    <img src="img/Capas/Acao/FILME 10 - Oldboy.png" alt="Filme Ação 10">
+                </div>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>Comédia</h2>
+            <div class="filmes" id="comedia">
+                <div class="filme" data-filme-id="11">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 1">
+                </div>
+                <div class="filme" data-filme-id="12">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 2">
+                </div>
+                <div class="filme" data-filme-id="13">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 3">
+                </div>
+                <div class="filme" data-filme-id="14">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 4">
+                </div>
+                <div class="filme" data-filme-id="15">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 5">
+                </div>
+                <div class="filme" data-filme-id="16">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 6">
+                </div>
+                <div class="filme" data-filme-id="17">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 7">
+                </div>
+                <div class="filme" data-filme-id="18">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 8">
+                </div>    
+                <div class="filme" data-filme-id="19">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 9">
+                </div> 
+                <div class="filme" data-filme-id="20">
+                    <img src="img/Capas/Comedia/" alt="Filme Comédia 10">
+                </div>
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2>Drama</h2>
+            <div class="filmes" id="drama">
+                <div class="filme" data-filme-id="21">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 1">
+                </div>
+                <div class="filme" data-filme-id="22">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 2">
+                </div>
+                <div class="filme" data-filme-id="23">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 3">
+                </div>
+                <div class="filme" data-filme-id="24">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 4">
+                </div>
+                <div class="filme" data-filme-id="25">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 5">
+                </div>
+                <div class="filme" data-filme-id="26">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 6">
+                </div> 
+                <div class="filme" data-filme-id="27">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 7">
+                </div>
+                <div class="filme" data-filme-id="28">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 8">
+                </div>
+                <div class="filme" data-filme-id="29">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 9">
+                </div>
+                <div class="filme" data-filme-id="30">
+                    <img src="img/Capas/Drama/" alt="Filme Drama 10">
+            </div>
+        </section>
+
+        <div id="modal-filme" class="modal">
+            <div class="modal-conteudo">
+                <div id="info-filme">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="movimento.js"></script>
+</body>
+</html>

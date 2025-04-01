@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #252A34;
+    color: #EAEAEA;
+}
+
+header {
+    background-color: #08D9D6;
+    padding: 15px;
+    text-align: center;
+}
+
+h1 {
+    color: #252A34;
+}
+
+.categoria {
+    margin: 20px;
+}
+
+h2 {
+    color: #FF2E63;
+    margin-bottom: 10px;
+}
+
+.filmes {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+
+.filmes::-webkit-scrollbar {
+    display: none;
+}
+
+.filme {
+    min-width: 220px;
+    height: 330px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.filme img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.filme:hover {
+    transform: scale(1.1);
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #EAEAEA;
+    padding: 8px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+.filme:hover .info {
+    transform: translateY(0);
+}
+
+.info h3 {
+    font-size: 1em;
+    margin-bottom: 3px;
+}
+
+.info p {
+    font-size: 0.85em;
+    margin: 1px 0;
+    white-space: normal;
+}
+
+.info strong {
+    color: #FF2E63;
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Ocultar o modal inicialmente */
+    position: fixed; /* Fixar o modal na tela */
+    z-index: 1; /* Colocar o modal na frente de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Adicionar barra de rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+}
+
+.modal-conteudo {
+    background-color: #252A34; /* Cor de fundo do conteúdo do modal */
+    margin: 15% auto; /* Centralizar o modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    position: relative; /* Necessário para posicionar o botão de fechar */
+}
+
+.fechar {
+    color: #aaa;
+    float: right; /* Posicionar o botão de fechar à direita */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#info-filme {
+    color: #EAEAEA;
+}
+
+#info-filme h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#info-filme p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+#info-filme strong {
+    color: #FF2E63;
+}
