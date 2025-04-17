@@ -1,153 +1,475 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #252A34;
-    color: #EAEAEA;
+  background-color: #252A34;
+  color: #EAEAEA;
 }
 
 header {
-    background-color: #08D9D6;
-    padding: 15px;
-    text-align: center;
+  background-color: #08D9D6;
+  padding: 15px;
+  text-align: center;
 }
 
 h1 {
-    color: #252A34;
+  color: #252A34;
 }
 
 .categoria {
-    margin: 20px;
+  margin: 20px;
 }
 
 h2 {
-    color: #FF2E63;
-    margin-bottom: 10px;
+  color: #FF2E63;
+  margin-bottom: 10px;
 }
 
 .filmes {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    scrollbar-width: none;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
 }
 
 .filmes::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .filme {
-    min-width: 220px;
-    height: 330px;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    position: relative;
+  min-width: 220px;
+  height: 330px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
 }
 
 .filme img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
 .filme:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #EAEAEA;
-    padding: 8px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow-y: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #EAEAEA;
+  padding: 8px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 
 .filme:hover .info {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .info h3 {
-    font-size: 1em;
-    margin-bottom: 3px;
+  font-size: 1em;
+  margin-bottom: 3px;
 }
 
 .info p {
-    font-size: 0.85em;
-    margin: 1px 0;
-    white-space: normal;
+  font-size: 0.85em;
+  margin: 1px 0;
+  white-space: normal;
 }
 
 .info strong {
-    color: #FF2E63;
+  color: #FF2E63;
 }
 
 /* Estilos para o modal */
 .modal {
-    display: none; /* Ocultar o modal inicialmente */
-    position: fixed; /* Fixar o modal na tela */
-    z-index: 1; /* Colocar o modal na frente de outros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Adicionar barra de rolagem se necessário */
-    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+  display: none; /* Ocultar o modal inicialmente */
+  position: fixed; /* Fixar o modal na tela */
+  z-index: 1; /* Colocar o modal na frente de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Adicionar barra de rolagem se necessário */
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
 }
 
 .modal-conteudo {
-    background-color: #252A34; /* Cor de fundo do conteúdo do modal */
-    margin: 15% auto; /* Centralizar o modal */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Largura do modal */
-    position: relative; /* Necessário para posicionar o botão de fechar */
+  background-color: #252A34; /* Cor de fundo do conteúdo do modal */
+  margin: 15% auto; /* Centralizar o modal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Largura do modal */
+  position: relative; /* Necessário para posicionar o botão de fechar */
 }
 
 .fechar {
-    color: #aaa;
-    float: right; /* Posicionar o botão de fechar à direita */
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right; /* Posicionar o botão de fechar à direita */
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .fechar:hover,
 .fechar:focus {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #info-filme {
-    color: #EAEAEA;
+  color: #EAEAEA;
 }
 
 #info-filme h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 #info-filme p {
-    font-size: 1em;
-    margin-bottom: 5px;
+  font-size: 1em;
+  margin-bottom: 5px;
 }
 
 #info-filme strong {
-    color: #FF2E63;
+  color: #FF2E63;
+}
+
+/* Reset de margens e padding para garantir um layout consistente */
+body, html {
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+height: 100%;
+width: 100%;
+box-sizing: border-box;
+}
+
+/* Tela de carregamento */
+#loading {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.spinner {
+border: 8px solid #f3f3f3;
+border-top: 8px solid #023cfc;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+animation: spin 1s linear infinite;
+}
+
+/* Definição da animação do spinner */
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* Estilo do banner */
+.banner {
+position: relative;
+height: 100vh;
+background-image: url('https://i.pinimg.com/1200x/07/13/e1/0713e19cf06f20ade640da8dc4c18e02.jpg');
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+/* Estilo da logo */
+.logo-container {
+margin-bottom: 5px;
+}
+
+.logo {
+font-size: 5rem;
+font-weight: bold;
+color: #fceb02;
+}
+
+/* Estilo do subtítulo */
+.subtitulo {
+color: #fceb02;
+font-size: 1.5rem;
+font-weight: 500;
+margin-top: 5px;
+text-align: center;
+border-radius: 8px;
+padding: 8px 12px;
+display: inline-block;
+}
+
+/* Estilo do botão */
+.button-container {
+margin-top: 20px;
+}
+
+.btn {
+padding: 15px 30px;
+font-size: 1.2rem;
+background-color: #ff6000;
+color: rgb(7, 2, 24);
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+background-color: #ff4500;
+}
+
+/* Estilo para o formulário de login e cadastro */
+.cadastro-container {
+width: 100%;
+max-width: 400px;
+margin: 30px auto;
+padding: 40px;
+background-color: rgb(15, 55, 235);
+border-radius: 12px;
+color: #f8ffff;
+text-align: center;
+margin-top: 100px;
+max-height: 600px;
+overflow-y: auto;
+}
+
+.login-container, .sucesso-container {
+width: 100%;
+max-width: 480px;
+margin: 30px auto;
+padding: 40px;
+background-color: rgb(31, 49, 207);
+border-radius: 12px;
+color: #f8ffff;
+text-align: center;
+}
+
+.cadastro-container h2, .login-container h2, .sucesso-container h2 {
+margin-bottom: 20px;
+font-size: 2rem;
+font-weight: bold;
+color: #f8ffff;
+}
+
+input, textarea, button {
+border-radius: 8px;
+padding: 10px;
+margin-bottom: 15px;
+width: 100%;
+border: 1px solid #ccc;
+font-size: 1rem;
+}
+
+/* Ajuste no botão para dar mais destaque */
+button {
+background-color: #f8ffff;
+color: rgb(126, 14, 14);
+border: none;
+cursor: pointer;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #e0e0e0;
+}
+
+/* Estilo dos inputs */
+.input-group {
+margin-bottom: 15px;
+text-align: left;
+}
+
+.input-group label {
+font-size: 1rem;
+margin-bottom: 5px;
+display: block;
+}
+
+.input-group input {
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+border-radius: 8px;
+border: 1px solid #083b99;
+background-color: #e9e9e9;
+}
+
+/* Estilo do botão de envio */
+.input-group button {
+padding: 12px 30px;
+background-color: #ad9382;
+color: rgb(17, 7, 155);
+border: none;
+border-radius: 8px;
+font-size: 1.1rem;
+cursor: pointer;
+width: 100%;
+}
+
+.input-group button:hover {
+background-color: #ff4500;
+}
+
+/* Texto abaixo do formulário */
+p {
+margin-top: 20px;
+font-size: 1rem;
+}
+
+p a {
+color: #fceb02;
+text-decoration: none;
+}
+
+p a:hover {
+text-decoration: underline;
+}
+
+/* Sucesso do cadastro */
+.sucesso-container .btn {
+width: auto;
+margin-top: 20px;
+padding: 10px 20px;
+font-size: 1.1rem;
+background-color: #28a745;
+color: rgb(22, 46, 153);
+text-decoration: none;
+border-radius: 5px;
+}
+
+.sucesso-container .btn:hover {
+background-color: #218838;
+}
+
+/* Responsividade para telas menores (tablets) */
+@media (max-width: 768px) {
+.logo {
+  font-size: 4rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 12px 25px;
+}
+
+.cadastro-container {
+  width: 90%;
+  max-width: 350px;
+  padding: 30px;
+  background-color: rgb(11, 28, 180);
+  border-radius: 12px;
+}
+
+.login-container, .sucesso-container {
+  width: 90%;
+  max-width: 480px;
+  padding: 30px;
+}
+
+.input-group input {
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.input-group button {
+  padding: 8px 18px;
+  font-size: 0.95rem;
+}
+
+p {
+  font-size: 0.9rem;
+}
+}
+
+/* Responsividade para telas muito pequenas (smartphones) */
+@media (max-width: 480px) {
+.logo {
+  font-size: 3.5rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+.cadastro-container {
+  width: 90%;
+  padding: 18px;
+}
+
+.login-container {
+  width: 90%;
+  padding: 18px;
+}
+
+.input-group input {
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.input-group button {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+}
+
+/* Página de login */
+.login-page {
+position: relative;
+height: 100vh;
+background-image: url('https://br.pinterest.com/pin/668362400965418567/');
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+/* Página de cadastro */
+.cadastro-page {
+position: relative;
+height: 100vh;
+background-image: url('https://i.pinimg.com/1200x/07/13/e1/0713e19cf06f20ade640da8dc4c18e02.jpg');
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }

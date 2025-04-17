@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Tela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de carregamento -->
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="banner">
+        <div class="logo-container">
+            <h1 class="logo">Nittlex Cine</h1>
+            <h2 class="subtitulo">Explore um mundo de entretenimento a qualquer hora, em qualquer lugar.</h2>
+        </div>
+        <div class="button-container">
+            <!-- O link abaixo vai redirecionar para a página de login -->
+            <a href="2Login.html">
+                <button class="btn" >Iniciar Sessão</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Aguarda o carregamento completo da página
+        window.onload = function() {
+            // Remove o efeito de carregamento após a página ser carregada
+            setTimeout(function() {
+                document.getElementById("loading").style.display = "none";
+            }, 500);  // A tela de carregamento ficará visível por 10 segundos
+        };
+    </script>
+</body>
+</html>
